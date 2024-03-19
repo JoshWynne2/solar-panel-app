@@ -40,6 +40,7 @@ class RegisteredUserController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+			'solar_panel_id' => NULL
         ]);
 
         event(new Registered($user));

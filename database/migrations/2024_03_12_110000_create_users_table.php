@@ -20,7 +20,7 @@ return new class extends Migration
             $table->rememberToken();
             $table->timestamps();
 			
-			$table->foreignId('solar_panel_id')->references('id')->on('solar_panels')->nullable();
+			$table->foreignId('solar_panel_id')->nullable(true)->default(NULL)->references('id')->on('solar_panels');
 
         });
     }
