@@ -1,0 +1,10 @@
+{
+    "today_gen": 40,
+    "sent_to_grid": 2,
+    "battery_charge": 20,
+    "current_gen": 60,
+    "yesterday_gen": 400,
+    "inverter_temp": 50,
+    "current_usage": 50,
+    "today_usage": 200
+}

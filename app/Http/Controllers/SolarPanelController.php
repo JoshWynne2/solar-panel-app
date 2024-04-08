@@ -6,6 +6,9 @@ use App\Http\Requests\Storesolar_panelRequest;
 use App\Http\Requests\Updatesolar_panelRequest;
 use App\Models\solar_panel;
 
+use Storage;
+
+
 class SolarPanelController extends Controller
 {
     /**
@@ -13,7 +16,9 @@ class SolarPanelController extends Controller
      */
     public function index()
     {
-        //
+		$json = Storage::disk('local')->get('testdata.json');
+		$json = json_decode($json, true);
+        return view('dashboard')->with('data', $json);
     }
 
     /**

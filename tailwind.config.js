@@ -12,9 +12,19 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                sans: ['Tajawal', ...defaultTheme.fontFamily.sans],
             },
         },
+		colors: {
+			transparent: 'transparent',
+			current: 'currentColor',
+			'white': '#ffffff',
+			'black': '#000000',
+			'gray': '#393939',
+			'lime': '#9bf542',
+			'orange': '#fa8057',
+			'blue': '#0b83ff',
+		}
     },
 
     plugins: [forms],
