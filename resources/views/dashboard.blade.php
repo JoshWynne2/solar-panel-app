@@ -29,7 +29,7 @@
 						Battery Charge
 					</div>
 					<div class="text-5xl drop-shadow-2xl shadow-black">
-						{{$data["battery_charge"]}}Kwh
+						{{$data["battery_charge"]}}%
 					</div>
 				</div>
 				<div class="py-5">
