@@ -1,7 +1,7 @@
 {
     "today_gen": 40,
-    "sent_to_grid": 2,
-    "battery_charge": 20,
+    "sent_to_grid": 3,
+    "battery_charge": 90,
     "current_gen": 60,
     "yesterday_gen": 400,
     "inverter_temp": 50,
