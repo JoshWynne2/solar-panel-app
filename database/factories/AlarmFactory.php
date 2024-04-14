@@ -19,6 +19,7 @@ class AlarmFactory extends Factory
         return [
 			'message' => "Battery full, Sending excess power to grid",
 			'type' => "100%",
+			'user_id' => '1'
         ];
     }
 }

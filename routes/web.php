@@ -20,6 +20,9 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', [SolarPanelController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/alarms', [SolarPanelController::class, 'alarms'])->middleware(['auth', 'verified'])->name('alarms');
+Route::get('/markalarm', [SolarPanelController::class, 'markalarm'])->middleware(['auth', 'verified'])->name('markalarm');
+Route::get('/settings', [SolarPanelController::class, 'settings'])->middleware(['auth', 'verified'])->name('settings');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

@@ -5,9 +5,9 @@ namespace App\Http\Controllers;
 use App\Http\Requests\Storesolar_panelRequest;
 use App\Http\Requests\Updatesolar_panelRequest;
 use App\Models\solar_panel;
-
+use App\Models\alarm;
+use Auth;
 use Storage;
-
 
 class SolarPanelController extends Controller
 {
@@ -16,12 +16,40 @@ class SolarPanelController extends Controller
      */
     public function index()
     {
-		$json = Storage::disk('local')->get('testdata.json');
+		$user = Auth::user();
+
+		$json = Storage::disk('local')->get($user->id.'.json');
 		$json = json_decode($json, true);
 
         return view('dashboard')->with('data', $json);
     }
 
+	public function alarms()
+    {
+		$user = Auth::user();
+
+		$alarmset = alarm::where("user_id", '=', $user->id)->get();
+
+        return view('alarms')->with('data', $alarmset);
+    }
+
+
+	public function markalarm()
+    {
+		alarm::factory()->times(1)->create();
+
+		return to_route('alarms');
+    }
+
+
+	public function settings()
+    {
+		$json = Storage::disk('local')->get('testdata.json');
+		$json = json_decode($json, true);
+
+        return view('settings')->with('data', $json);
+
+    }
     /**
      * Show the form for creating a new resource.
      */

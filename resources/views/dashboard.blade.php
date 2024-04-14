@@ -119,19 +119,4 @@
 			</div>
 		</div>
 	</div>
-
-	<footer>
-		<!-- nav bar -->
-		<nav class="flex flex-auto text-white text-center">
-			<div class="rounded-xl basis-1/3">
-				Overview
-			</div>
-			<div class="rounded-xl basis-1/3">
-				Alarms
-			</div>
-			<div class="rounded-xl basis-1/3">
-				Settings
-			</div>
-		</nav>
-	</footer>
 </x-app-layout>
