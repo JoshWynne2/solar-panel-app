@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use Illuminate\View\View;
+use Illuminate\Support\Facades\Storage;
 
 class RegisteredUserController extends Controller
 {
@@ -28,6 +29,7 @@ class RegisteredUserController extends Controller
      *
      * @throws \Illuminate\Validation\ValidationException
      */
+	
     public function store(Request $request): RedirectResponse
     {
         $request->validate([
@@ -43,6 +45,9 @@ class RegisteredUserController extends Controller
 			'solar_panel_id' => NULL
         ]);
 
+		$data = Storage::disk('local')->get('blank.json');
+		Storage::disk('local')->put($user->id.'.json', $data);
+		
         event(new Registered($user));
 
         Auth::login($user);
