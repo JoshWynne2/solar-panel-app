@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\solarPanel;
+use App\Models\solar_panel;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -13,6 +13,6 @@ class SolarPanelSeeder extends Seeder
      */
     public function run(): void
     {
-        solarPanel::factory()->times(2)->create();
+        solar_panel::factory()->times(2)->create();
     }
 }

@@ -15,3 +15,16 @@ plan:
 	the navagation menu on the bottom of the main page will toggle between 3 screens within the same page
 
 
+
+19th - submit github link CODING ENDS
+following week - presentations - being scheduled soon (monday 22nd?)
+presentation:
+	powerpoint
+	what youve learned
+	demo the app itself
+		- work around not showing a live version 
+		- youre creating a screen recording for the submission anyway you can bring that into the powerpoint
+
+upload recording to microsoft stream
+compleated report, recording, powerpoint due on the 26th
+

@@ -16,6 +16,7 @@ class SolarPanelController extends Controller
      */
     public function index()
     {
+		
 		$json = Storage::disk('local')->get('testdata.json');
 		$json = json_decode($json, true);
 

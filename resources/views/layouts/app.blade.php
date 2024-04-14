@@ -13,8 +13,9 @@
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+		@stack('head')
     </head>
-    <body class="font-sans antialiased">
+    <body class="font-sans antialiased bg-gray">
         <div class="min-h-screen bg-gray dark:bg-gray">
             
 
