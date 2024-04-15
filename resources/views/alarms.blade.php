@@ -39,7 +39,7 @@
 				<div class="relative my-shadow z-20">
 					{{$alarm->created_at}}
 				</div>
-				<button class="relative my-shadow z-20" onclick="location.href = '{{route('markalarm')}}';">
+				<button class="relative my-shadow z-20" onclick="location.href = '{{route('markalarm', $alarm->id)}}';">
 					Dismiss
 				</button>
 			</div>

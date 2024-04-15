@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StorealarmRequest;
 use App\Http\Requests\UpdatealarmRequest;
 use App\Models\alarm;
+use Auth;
+use Request;
 
 class AlarmController extends Controller
 {
@@ -13,7 +15,18 @@ class AlarmController extends Controller
      */
     public function index()
     {
-        //
+		$user = Auth::user();
+
+		$alarmset = alarm::where("user_id", '=', $user->id)->get();
+
+        return view('alarms')->with('data', $alarmset);
+    }
+
+	public function markalarm(Request $request, $id)
+    {
+		alarm::where("id", '=', $id)->delete();
+
+		return to_route('alarms');
     }
 
     /**
@@ -43,9 +56,11 @@ class AlarmController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(alarm $alarm)
+    public function edit($id)
     {
-        //
+		alarm::where("id", '=', $id)->delete();
+
+		return to_route('alarms');
     }
 
     /**
@@ -61,6 +76,6 @@ class AlarmController extends Controller
      */
     public function destroy(alarm $alarm)
     {
-        //
+
     }
 }

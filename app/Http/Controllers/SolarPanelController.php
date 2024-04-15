@@ -8,6 +8,7 @@ use App\Models\solar_panel;
 use App\Models\alarm;
 use Auth;
 use Storage;
+use Request;
 
 class SolarPanelController extends Controller
 {
@@ -23,24 +24,6 @@ class SolarPanelController extends Controller
 
         return view('dashboard')->with('data', $json)->with('input', $jsonstring);
     }
-
-	public function alarms()
-    {
-		$user = Auth::user();
-
-		$alarmset = alarm::where("user_id", '=', $user->id)->get();
-
-        return view('alarms')->with('data', $alarmset);
-    }
-
-
-	public function markalarm()
-    {
-		alarm::factory()->times(1)->create();
-
-		return to_route('alarms');
-    }
-
 
 	public function settings()
     {

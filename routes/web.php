@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AlarmController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SolarPanelController;
 use Illuminate\Support\Facades\Route;
@@ -20,8 +21,8 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', [SolarPanelController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
-Route::get('/alarms', [SolarPanelController::class, 'alarms'])->middleware(['auth', 'verified'])->name('alarms');
-Route::get('/markalarm', [SolarPanelController::class, 'markalarm'])->middleware(['auth', 'verified'])->name('markalarm');
+Route::get('/alarms', [AlarmController::class, 'index'])->middleware(['auth', 'verified'])->name('alarms');
+Route::get('/markalarm/{id}', [AlarmController::class, 'edit'])->middleware(['auth', 'verified'])->name('markalarm');
 Route::get('/settings', [SolarPanelController::class, 'settings'])->middleware(['auth', 'verified'])->name('settings');
 
 Route::middleware('auth')->group(function () {
