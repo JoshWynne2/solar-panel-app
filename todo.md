@@ -4,10 +4,19 @@ SOFTWARE PROJECT TODO LIST
 [x] - Link json file to solar panel data_path correctly
 [x] - Create views that send the json data with the controller
 [x] - Transpose the figma design into tailwind
+[x] - Finish the main page
+
 [ ] - Figure out how a progressive web app works 
 	update: apple has removed the ability to do this but only if youre in the eu!!!
 [ ] - Make user roles work
-[x] - Finish the main page
+	what roles do the user have:
+
+[ ] - Have alarms remove when dismissed
+
+[ ] - Settings page:
+[ ] - Log out
+[ ] - Change email
+[ ] - Reset password
 
 
 plan:
