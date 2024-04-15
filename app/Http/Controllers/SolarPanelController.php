@@ -18,10 +18,10 @@ class SolarPanelController extends Controller
     {
 		$user = Auth::user();
 
-		$json = Storage::disk('local')->get($user->id.'.json');
-		$json = json_decode($json, true);
+		$jsonstring = Storage::disk('local')->get($user->id.'.json');
+		$json = json_decode($jsonstring, true);
 
-        return view('dashboard')->with('data', $json);
+        return view('dashboard')->with('data', $json)->with('input', $jsonstring);
     }
 
 	public function alarms()

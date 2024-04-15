@@ -3,11 +3,11 @@ SOFTWARE PROJECT TODO LIST
 [x] - Create dummy data
 [x] - Link json file to solar panel data_path correctly
 [x] - Create views that send the json data with the controller
-[ ] - Transpose the figma design into tailwind
+[x] - Transpose the figma design into tailwind
 [ ] - Figure out how a progressive web app works 
 	update: apple has removed the ability to do this but only if youre in the eu!!!
 [ ] - Make user roles work
-[ ] - Finish the main page
+[x] - Finish the main page
 
 
 plan:

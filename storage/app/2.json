@@ -1,0 +1,21 @@
+{
+    "today_gen": 0,
+    "sent_to_grid": 0,
+    "battery_charge": 0,
+    "current_gen": 0,
+    "yesterday_gen": 0,
+    "inverter_temp": 0,
+    "current_usage": 0,
+    "today_usage": 0,
+
+    "today_hourly": {
+        "generation": [],
+        "usage": []
+    },
+
+    "monthly": {
+        "generation": {},
+
+        "usage": {}
+    }
+}

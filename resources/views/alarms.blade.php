@@ -30,14 +30,14 @@
 		@foreach($data as $alarm)
 		<div  class="relative z-10 rounded-xl bg-white text-black text-center font-medium pt-5 block-shadow overflow-clip justify-around">
 			<div class="relative text-base my-shadow z-20">
-				Using Grid Power
+				{{$alarm->message}}
 			</div>
 			<div class="relative text-5xl my-shadow z-20">
-				Battery 0%
+				{{$alarm->type}}
 			</div>
 			<div class="relative flex justify-between m-2 ">
 				<div class="relative my-shadow z-20">
-					HH:MM:SS AM DD-MM-YY
+					{{$alarm->created_at}}
 				</div>
 				<button class="relative my-shadow z-20" onclick="location.href = '{{route('markalarm')}}';">
 					Dismiss
