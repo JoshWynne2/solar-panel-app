@@ -1,7 +1,3 @@
-@push('head')
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.2/p5.min.js" integrity="sha512-eu9vkh+EbAsW3fMmPTj/DP5W3UegIdu0Z/OABMocvoofx43MYBkcQ9hRIVxZndV1vcCYQwBg+U1PkWl04TD0Jg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="{{asset("storage/js/main.js")}}"></script>
-@endpush
 <x-app-layout>
 	<style>
 		.my-shadow{
@@ -26,11 +22,26 @@
 
 		<div class="relative z-10 rounded-xl bg-white text-black text-center font-medium py-5 block-shadow overflow-clip">
 			<div class="relative text-base my-shadow z-20">
-					hi
+				App Version: 0.2
 			</div>
 			<div class="relative text-5xl my-shadow z-20">
-			real log out button real hi
+				Solimeter
 			</div>
+		</div>
+
+		
+
+	</div>
+	
+	<div class="relative text-white bg-slate w-100 p-5">
+		<div onclick="location.href = '{{route('logout')}}'" class="relative text-2xl my-shadow z-20">
+			Log out
+		</div>
+	</div>
+
+	<div class="relative text-white bg-slate w-100 p-5 mt-2">
+		<div onclick="location.href = '{{route('profile.edit')}}'" class="relative text-2xl my-shadow z-20">
+			Edit Profile
 		</div>
 	</div>
 

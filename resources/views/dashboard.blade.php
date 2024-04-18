@@ -93,7 +93,7 @@ let inputdata =	JSON.parse(@json($input));
 						Inverter Temperature
 					</div>
 					<div class="text-5xl my-shadow">
-						{{$data["inverter_temp"]}}*C
+						{{$data["inverter_temp"]}}°C
 					</div>
 				</div>
 			</div>

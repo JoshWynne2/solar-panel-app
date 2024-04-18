@@ -16,7 +16,7 @@ return new class extends Migration
             $table->timestamps();
 			$table->string("message");
 			$table->string("type");
-			$table->foreignId("user_id")->references("id")->on("users");
+			$table->foreignId("user_id")->references("id")->on("users")->cascadeOnDelete();
         });
     }
 

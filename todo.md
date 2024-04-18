@@ -10,13 +10,14 @@ SOFTWARE PROJECT TODO LIST
 	update: apple has removed the ability to do this but only if youre in the eu!!!
 [ ] - Make user roles work
 	what roles do the user have:
+		NONE!!!
 
-[ ] - Have alarms remove when dismissed
+[x] - Have alarms remove when dismissed
 
-[ ] - Settings page:
-[ ] - Log out
-[ ] - Change email
-[ ] - Reset password
+[x] - Settings page:
+[x] - Log out
+[x] - Change email
+[x] - Reset password
 
 
 plan:

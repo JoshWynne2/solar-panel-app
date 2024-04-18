@@ -22,12 +22,16 @@
         }
 	</style>
 	<!-- wide box -->
-	<div class="p-3 overflow-hidden">
-		<!-- <div id="p5sketch">
-
+	<!-- <div id="p5sketch">
+		
 		</div> -->
-
-		@foreach($data as $alarm)
+	<x-primary-button>
+		<a href="{{route('alarm.create')}}">
+			Create Alarm
+		</a>
+	</x-primary-button>
+	@foreach($data as $alarm)
+	<div class="p-3 overflow-hidden">
 		<div  class="relative z-10 rounded-xl bg-white text-black text-center font-medium pt-5 block-shadow overflow-clip justify-around">
 			<div class="relative text-base my-shadow z-20">
 				{{$alarm->message}}
@@ -35,7 +39,7 @@
 			<div class="relative text-5xl my-shadow z-20">
 				{{$alarm->type}}
 			</div>
-			<div class="relative flex justify-between m-2 ">
+			<div class="relative flex justify-between px-2 ">
 				<div class="relative my-shadow z-20">
 					{{$alarm->created_at}}
 				</div>
@@ -44,7 +48,7 @@
 				</button>
 			</div>
 		</div>
-		@endforeach
 	</div>
+	@endforeach
 
 </x-app-layout>

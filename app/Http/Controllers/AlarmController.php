@@ -22,19 +22,13 @@ class AlarmController extends Controller
         return view('alarms')->with('data', $alarmset);
     }
 
-	public function markalarm(Request $request, $id)
-    {
-		alarm::where("id", '=', $id)->delete();
-
-		return to_route('alarms');
-    }
-
     /**
      * Show the form for creating a new resource.
      */
     public function create()
     {
-        //
+        alarm::factory()->times(1)->create();
+		return to_route('alarms');
     }
 
     /**
