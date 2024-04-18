@@ -21,6 +21,7 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', [SolarPanelController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/oneday', [SolarPanelController::class, 'edit'])->middleware(['auth', 'verified'])->name('oneday');
 Route::get('/alarms', [AlarmController::class, 'index'])->middleware(['auth', 'verified'])->name('alarms');
 Route::get('/alarms/create', [AlarmController::class, 'create'])->middleware(['auth', 'verified'])->name('alarm.create');
 Route::get('/markalarm/{id}', [AlarmController::class, 'edit'])->middleware(['auth', 'verified'])->name('markalarm');

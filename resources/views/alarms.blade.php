@@ -27,7 +27,7 @@
 		</div> -->
 	<x-primary-button>
 		<a href="{{route('alarm.create')}}">
-			Create Alarm
+			(DEBUG) Create Alarm
 		</a>
 	</x-primary-button>
 	@foreach($data as $alarm)

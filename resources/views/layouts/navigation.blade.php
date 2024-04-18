@@ -5,7 +5,7 @@
 			<div class="rounded-xl basis-1/3">
 			<a href="{{route('dashboard')}}" class="flex flex-col">
 				<i class="fa-solid fa-house fa-2xl p-5"></i>
-				Overview
+				Dashboard
 			</a>
 			</div>
 			<div class="rounded-xl basis-1/3">
@@ -17,7 +17,7 @@
 			<div class="rounded-xl basis-1/3">
 			<a href="{{route('settings')}}" class="flex flex-col">
 				<i class="fa-solid fa-user fa-2xl p-5"></i>
-			Settings
+				Settings
 			</a>
 			</div>
 		</nav>
